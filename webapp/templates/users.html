@@ -1,0 +1,30 @@
+<html>
+<body>
+<h1>Also check our <a href="/index">comments</a></h1>
+<h3>Leave a comment:</h3>
+<form name="post_user" action="users" method="post">
+    Username: <br> <input type="text" name="user" value="Johnny"> <br>
+    <input type="submit" value="Write down history">
+</form>
+
+<table border=1>
+    <tr>
+        <th> Our users:</th>
+    </tr>
+    {% for res in result %}
+
+
+    {% for key, value in res.items() %}
+    <tr>
+
+        <td> {{ value }}</td>
+    </tr>
+    {% endfor %}
+
+
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
